@@ -2,14 +2,14 @@ from typing import List
 
 
 class Solution:
-    def maxProfit(self, prices: List[int]) -> int:
-        for i in range(len(prices)):
-            prices[i]
+    def strStr(self, haystack: str, needle: str) -> int:
+        index = -1
+        for i in range(len(haystack)-len(needle)+1):
+            if haystack[i:i+len(needle)] == needle:
+                return i
+        return index
 
-
-        return prices
-
-
-prices = [7,1,5,3,6,4]
+haystack = "sadbutsadday"
+needle = "day"
 sol = Solution()
-print(sol.maxProfit(prices))
+print(sol.strStr(haystack, needle))
